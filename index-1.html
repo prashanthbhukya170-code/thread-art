@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PS STRING ART - Premium handmade custom string art portraits in Hyderabad.">
+<title>PS STRING ART | Threads That Tell Stories</title>
+<style>
+:root{
+  --ink:#171513; --gold:#b58a45; --cream:#f8f5ef; --paper:#fffdf9;
+  --muted:#6f6a62; --line:#e7dfd2; --green:#087a4b;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream)}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;font-family:Georgia,serif;font-size:22px;font-weight:700;letter-spacing:1.5px}
+.logo-mark{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-size:17px}
+nav{display:flex;gap:25px;color:#514c45;font-size:14px}
+nav a:hover{color:var(--gold)}
+.nav-btn{background:var(--ink);color:white;padding:11px 17px;border-radius:999px;font-size:13px}
+.menu{display:none;background:none;border:0;font-size:25px}
+
+.hero{padding:78px 0 70px;background:
+ radial-gradient(circle at 85% 20%,rgba(181,138,69,.14),transparent 28%),
+ linear-gradient(135deg,#fffdf9,#f3eee5)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+h1{font-family:Georgia,serif;font-size:clamp(46px,7vw,82px);line-height:.98;margin:15px 0 22px;font-weight:500}
+.hero p{font-size:18px;line-height:1.7;color:var(--muted);max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:999px;border:1px solid var(--ink);font-weight:700;font-size:14px}
+.btn-dark{background:var(--ink);color:white}.btn-light{background:white}
+.btn-wa{background:var(--green);color:white;border-color:var(--green)}
+.hero-art{min-height:440px;border-radius:28px;background:#e9e2d7;position:relative;overflow:hidden;display:grid;place-items:center}
+.circle-art{width:76%;aspect-ratio:1;border:2px solid #29251f;border-radius:50%;position:relative;display:grid;place-items:center}
+.circle-art:before,.circle-art:after{content:"";position:absolute;border:1px solid var(--gold);border-radius:50%;inset:10%;transform:rotate(35deg)}
+.circle-art:after{inset:25%;transform:rotate(-30deg)}
+.ps{font-family:Georgia,serif;font-size:110px;letter-spacing:-15px}.heart{font-size:45px;position:absolute;z-index:2;background:#e9e2d7;padding:8px}
+
+.section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+.kicker{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:800;text-transform:uppercase}
+h2{font:500 clamp(34px,5vw,50px) Georgia,serif;margin:10px 0 13px}
+.section-head p{color:var(--muted);line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:25px;min-height:165px}
+.card .icon{font-size:27px}.card h3{margin:15px 0 8px;font-family:Georgia,serif}.card p{color:var(--muted);font-size:14px;line-height:1.55}
+
+.pricing{background:#171513;color:white}.pricing .section-head p{color:#bdb7ad}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.price{border:1px solid #3b3833;background:#211f1c;border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center}
+.price strong{font-family:Georgia,serif;font-size:20px}.price span{color:#d7b875;font-weight:700}
+.price.featured{border-color:var(--gold);background:#26221c}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-box{aspect-ratio:1;border-radius:22px;background:linear-gradient(135deg,#e9e1d5,#fffdf9);border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:20px;color:#81796e}
+.gallery-box b{display:block;font-family:Georgia,serif;color:var(--ink);font-size:22px;margin-bottom:6px}
+
+.order-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:start}
+.info-panel{background:var(--ink);color:white;border-radius:25px;padding:32px}
+.info-panel p{color:#c6c0b7;line-height:1.7}.contact-line{margin:22px 0;color:#e8e2d9}
+form{background:white;border:1px solid var(--line);border-radius:25px;padding:30px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:13px;font-weight:700;display:block;margin-bottom:7px}
+input,select,textarea{width:100%;border:1px solid #dcd4c8;border-radius:12px;padding:13px;background:#fffdf9;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+.full{grid-column:1/-1}.location-row{display:flex;gap:8px}.location-row button{white-space:nowrap;border:1px solid var(--line);border-radius:12px;background:#f4efe7;padding:0 12px}
+small{display:block;color:#837b70;margin-top:6px;line-height:1.4}
+.submit{width:100%;margin-top:18px;border:0;background:var(--green);color:white;padding:15px;border-radius:999px;font-weight:800;cursor:pointer}
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}.faq details{background:white;border:1px solid var(--line);border-radius:15px;padding:18px}.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--muted);line-height:1.6}
+footer{background:#111;color:#bdb7ad;padding:35px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font-family:Georgia,serif;color:white;font-size:20px}
+.chat{position:fixed;right:18px;bottom:18px;z-index:30}.chat-toggle{border:0;border-radius:50%;width:58px;height:58px;background:var(--ink);color:white;font-size:23px;box-shadow:0 8px 30px #0003;cursor:pointer}
+.chat-box{display:none;position:absolute;right:0;bottom:70px;width:min(340px,calc(100vw - 36px));background:white;border:1px solid var(--line);border-radius:20px;box-shadow:0 15px 45px #0002;overflow:hidden}
+.chat-box.open{display:block}.chat-head{padding:17px;background:var(--ink);color:white}.chat-head small{color:#c8c0b5}.chat-msgs{height:260px;padding:15px;overflow:auto;background:#fbf8f2}.msg{padding:10px 12px;border-radius:14px;margin:7px 0;max-width:90%;font-size:13px;line-height:1.45}.bot{background:white;border:1px solid var(--line)}.user{background:#eee7dc;margin-left:auto}
+.quick{display:flex;gap:6px;overflow:auto;padding:10px;border-top:1px solid var(--line)}.quick button{border:1px solid var(--line);background:white;border-radius:999px;padding:7px 10px;white-space:nowrap;font-size:11px}
+.chat-input{display:flex;border-top:1px solid var(--line)}.chat-input input{border:0;border-radius:0}.chat-input button{border:0;background:var(--gold);padding:0 17px}
+@media(max-width:800px){
+ nav{display:none}.menu{display:block}.nav-btn{display:none}
+ .hero{padding-top:45px}.hero-grid,.order-wrap{grid-template-columns:1fr}.hero-art{min-height:320px}
+ .cards{grid-template-columns:1fr 1fr}.price-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ .section{padding:60px 0}.cards,.price-grid,.gallery,.faq,.form-grid{grid-template-columns:1fr}
+ .full{grid-column:auto}.hero-art{min-height:280px}.ps{font-size:80px}
+ .footer-row{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="container nav">
+  <a class="logo" href="#home"><span class="logo-mark">PS</span> STRING ART</a>
+  <nav><a href="#about">About</a><a href="#gallery">Creations</a><a href="#prices">Prices</a><a href="#order">Order</a><a href="#contact">Contact</a></nav>
+  <a class="nav-btn" href="#order">Create Yours</a>
+  <button class="menu" aria-label="Menu">☰</button>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Premium Handmade • Hyderabad</div>
+   <h1>Threads That<br><i>Tell Stories.</i></h1>
+   <p>Turn your favourite photo into a one-of-a-kind handmade string art masterpiece — crafted specially for you.</p>
+   <div class="actions">
+    <a class="btn btn-dark" href="#order">Order Custom Art →</a>
+    <a class="btn btn-wa" href="https://wa.me/919701258294?text=Hi%20PS%20STRING%20ART%2C%20I%20want%20to%20know%20more%20about%20custom%20string%20art." target="_blank">WhatsApp Us</a>
+   </div>
+  </div>
+  <div class="hero-art" aria-label="PS String Art decorative artwork">
+   <div class="circle-art"><div class="ps">P<span class="heart">♡</span>S</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container">
+  <div class="section-head"><div class="kicker">The Craft</div><h2>Made by hand. Made for you.</h2><p>PS STRING ART creates detailed portraits and custom designs using nails, premium thread and a wooden board. Every piece is made specially for each customer.</p></div>
+  <div class="cards">
+   <div class="card"><div class="icon">🖼️</div><h3>Photo Portraits</h3><p>Transform your favourite photo into a handmade artwork.</p></div>
+   <div class="card"><div class="icon">❤️</div><h3>Couple & Family</h3><p>Meaningful portraits for weddings, anniversaries and family memories.</p></div>
+   <div class="card"><div class="icon">🔤</div><h3>Names & Logos</h3><p>Custom names, initials, logos and special designs.</p></div>
+   <div class="card"><div class="icon">🎁</div><h3>Perfect Gift</h3><p>A unique handmade gift for birthdays and special moments.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section pricing" id="prices">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Price Collection</div><h2>Choose Your Size</h2><p>Simple, transparent pricing for our standard handmade string art collection.</p></div>
+  <div class="price-grid">
+   <div class="price"><strong>8 × 8"</strong><span>₹799</span></div><div class="price"><strong>10 × 10"</strong><span>₹999</span></div><div class="price"><strong>12 × 12"</strong><span>₹1,299</span></div>
+   <div class="price"><strong>14 × 14"</strong><span>₹1,599</span></div><div class="price"><strong>16 × 16"</strong><span>₹1,999</span></div><div class="price featured"><strong>18 × 18"</strong><span>₹2,499</span></div>
+   <div class="price"><strong>20 × 20"</strong><span>₹2,999</span></div><div class="price"><strong>24 × 24"</strong><span>₹3,999</span></div><div class="price featured"><strong>30 × 30"</strong><span>₹5,499</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="gallery">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Our Creations</div><h2>Every thread has a story.</h2><p>Add your real finished-art photos here to showcase your work.</p></div>
+  <div class="gallery">
+   <div class="gallery-box"><div><b>Custom Portrait</b>Photo → String Art</div></div>
+   <div class="gallery-box"><div><b>Couple Art</b>Made for special moments</div></div>
+   <div class="gallery-box"><div><b>Family Memories</b>Handmade keepsake</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="order">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Custom Order</div><h2>Create Your Artwork</h2><p>Fill in your details. When you submit, WhatsApp opens with your order information ready to send.</p></div>
+  <div class="order-wrap">
+   <div class="info-panel">
+    <div class="kicker">PS STRING ART</div><h2>Let's make your memory.</h2>
+    <p>Choose a size, tell us what you want, add your delivery location and send your order directly on WhatsApp.</p>
+    <div class="contact-line">📍 Hyderabad</div>
+    <div class="contact-line">📞 9701258294</div>
+    <div class="contact-line">📷 @the_nanka</div>
+   </div>
+   <form id="orderForm">
+    <div class="form-grid">
+     <div><label for="customerName">Your Name *</label><input id="customerName" required placeholder="Enter your name"></div>
+     <div><label for="customerPhone">Phone Number *</label><input id="customerPhone" required inputmode="tel" placeholder="10-digit number"></div>
+     <div><label for="orderSize">Size *</label><select id="orderSize" required><option value="">Select size</option><option>8 × 8 inch — ₹799</option><option>10 × 10 inch — ₹999</option><option>12 × 12 inch — ₹1,299</option><option>14 × 14 inch — ₹1,599</option><option>16 × 16 inch — ₹1,999</option><option>18 × 18 inch — ₹2,499</option><option>20 × 20 inch — ₹2,999</option><option>24 × 24 inch — ₹3,999</option><option>30 × 30 inch — ₹5,499</option></select></div>
+     <div><label for="orderType">Order Type *</label><select id="orderType" required><option value="">Select type</option><option>Custom Photo Thread Art</option><option>Couple / Wedding Portrait</option><option>Family Portrait</option><option>Name / Initial Design</option><option>Logo / Business Design</option><option>Personalized Gift</option></select></div>
+     <div class="full"><label for="customerLocation">Delivery Location *</label><div class="location-row"><input id="customerLocation" required placeholder="City / Area / Full address"><button type="button" id="locBtn">📍 Use GPS</button></div><small>GPS is optional. You can type your address manually.</small></div>
+     <div class="full"><label for="orderNotes">Custom Details</label><textarea id="orderNotes" rows="4" placeholder="Tell us about the photo, background, special request, delivery date, etc."></textarea></div>
+     <div class="full"><label for="orderPhoto">Photo (optional)</label><input id="orderPhoto" type="file" accept="image/*"><small>Your photo is not uploaded to this website. Attach it manually in WhatsApp after the chat opens.</small></div>
+    </div>
+    <button class="submit" type="submit">💬 Send Order to WhatsApp</button>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Contact</div><h2>Ready to create yours?</h2><p>Message PS STRING ART directly for custom designs and orders.</p></div>
+  <div class="actions" style="justify-content:center">
+   <a class="btn btn-wa" href="https://wa.me/919701258294?text=Hi%20PS%20STRING%20ART%2C%20I%20want%20to%20place%20an%20order." target="_blank">WhatsApp • 9701258294</a>
+   <a class="btn btn-light" href="https://instagram.com/the_nanka" target="_blank">Instagram • @the_nanka</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-row">
+  <div><div class="footer-brand">PS STRING ART</div><small>Threads That Tell Stories • Hyderabad</small></div>
+  <div>© 2026 PS STRING ART</div>
+ </div>
+</footer>
+
+<div class="chat">
+ <button class="chat-toggle" id="chatToggle" aria-label="Open AI assistant">✦</button>
+ <div class="chat-box" id="chatBox">
+  <div class="chat-head"><b>PS String Art Assistant</b><small>Instant help for sizes, prices & orders</small></div>
+  <div class="chat-msgs" id="chatMessages"><div class="msg bot">Hi 👋 Welcome to PS STRING ART. Ask me about prices, sizes, custom orders or WhatsApp booking.</div></div>
+  <div class="quick"><button data-q="What are your prices?">💰 Prices</button><button data-q="What sizes are available?">📏 Sizes</button><button data-q="How can I order?">🛒 Order</button><button data-q="Where are you located?">📍 Location</button></div>
+  <div class="chat-input"><input id="chatInput" placeholder="Ask a question..."><button id="sendChat">➤</button></div>
+ </div>
+</div>
+
+<script>
+const WA="919701258294";
+const enc=s=>encodeURIComponent(s);
+
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("customerName").value.trim();
+ const phone=document.getElementById("customerPhone").value.trim();
+ const size=document.getElementById("orderSize").value;
+ const type=document.getElementById("orderType").value;
+ const location=document.getElementById("customerLocation").value.trim();
+ const notes=document.getElementById("orderNotes").value.trim();
+ const photo=document.getElementById("orderPhoto").files[0];
+ let msg=`Hi PS STRING ART!%0A%0AI want to place a custom order.%0A%0AName: ${enc(name)}%0APhone: ${enc(phone)}%0ASize: ${enc(size)}%0AOrder Type: ${enc(type)}%0ADelivery Location: ${enc(location)}`;
+ if(notes) msg+=`%0ADetails: ${enc(notes)}`;
+ if(photo) msg+=`%0A%0A📸 I have selected a photo. I will attach it in this WhatsApp chat.`;
+ msg+=`%0A%0AThank you!`;
+ window.open(`https://wa.me/${WA}?text=${msg}`,"_blank");
+});
+
+document.getElementById("locBtn").addEventListener("click",()=>{
+ if(!navigator.geolocation){alert("GPS is not supported. Please type your address.");return}
+ navigator.geolocation.getCurrentPosition(
+  p=>{document.getElementById("customerLocation").value=`GPS: ${p.coords.latitude.toFixed(6)}, ${p.coords.longitude.toFixed(6)}`},
+  ()=>alert("Location permission was not granted. Please enter your address manually.")
+ );
+});
+
+const chatBox=document.getElementById("chatBox");
+document.getElementById("chatToggle").onclick=()=>chatBox.classList.toggle("open");
+const prices=`8×8 ₹799 • 10×10 ₹999 • 12×12 ₹1,299 • 14×14 ₹1,599 • 16×16 ₹1,999 • 18×18 ₹2,499 • 20×20 ₹2,999 • 24×24 ₹3,999 • 30×30 ₹5,499`;
+function addMsg(text,who){
+ const d=document.createElement("div");d.className="msg "+who;d.textContent=text;
+ const box=document.getElementById("chatMessages");box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function answer(q){
+ const x=q.toLowerCase();
+ if(x.includes("price")||x.includes("cost")) return "Our prices are: "+prices;
+ if(x.includes("size")) return "Available sizes: 8×8, 10×10, 12×12, 14×14, 16×16, 18×18, 20×20, 24×24 and 30×30 inches.";
+ if(x.includes("order")||x.includes("buy")) return "Use the Custom Order form on this page, or WhatsApp us directly at 9701258294.";
+ if(x.includes("location")||x.includes("where")) return "We are based in Hyderabad. You can enter your delivery location in the order form.";
+ if(x.includes("instagram")) return "Instagram: @the_nanka";
+ if(x.includes("custom")||x.includes("photo")) return "We create custom photo portraits, couple & wedding portraits, family portraits, names, initials, logos and personalized gifts.";
+ return "I can help with prices, sizes, custom designs, orders, Instagram and location. What would you like to know?";
+}
+function sendChat(){
+ const input=document.getElementById("chatInput"),q=input.value.trim();if(!q)return;
+ addMsg(q,"user");input.value="";setTimeout(()=>addMsg(answer(q),"bot"),250);
+}
+document.getElementById("sendChat").onclick=sendChat;
+document.getElementById("chatInput").addEventListener("keydown",e=>{if(e.key==="Enter")sendChat()});
+document.querySelectorAll(".quick button").forEach(b=>b.onclick=()=>{addMsg(b.dataset.q,"user");setTimeout(()=>addMsg(answer(b.dataset.q),"bot"),250)});
+</script>
+</body>
+</html>
