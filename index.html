@@ -80,6 +80,49 @@
   </tbody></table></div>
 </section>
 
+
+<section id="order" class="section order-section">
+  <p class="eyebrow">ORDER PROCESSING</p>
+  <h2>Place your custom order</h2>
+  <p class="lead">Choose your size, add your details, and send the order directly to PS STRING ART on WhatsApp.</p>
+  <form id="orderForm" class="order-form">
+    <div class="form-grid">
+      <label>Customer Name<input id="customerName" required placeholder="Your name"></label>
+      <label>Phone Number<input id="customerPhone" type="tel" required placeholder="Your phone number"></label>
+      <label>Delivery Location / Address<input id="customerLocation" required placeholder="Your delivery address / area"></label>
+      <label>Choose Size
+        <select id="orderSize" required>
+          <option value="">Select size</option>
+          <option>8 × 8 inch — ₹799</option><option>10 × 10 inch — ₹999</option>
+          <option>12 × 12 inch — ₹1,299</option><option>14 × 14 inch — ₹1,599</option>
+          <option>16 × 16 inch — ₹1,999</option><option>18 × 18 inch — ₹2,499</option>
+          <option>20 × 20 inch — ₹2,999</option><option>24 × 24 inch — ₹3,999</option>
+          <option>30 × 30 inch — ₹5,499</option>
+        </select>
+      </label>
+      <label>Order Type
+        <select id="orderType" required>
+          <option value="">Select type</option>
+          <option>Custom Photo Thread Art</option>
+          <option>Couple / Wedding Portrait</option>
+          <option>Family Portrait</option>
+          <option>Name / Initial Design</option>
+          <option>Logo / Business Design</option>
+          <option>Personalized Gift</option>
+        </select>
+      </label>
+    </div>
+    <label>Custom Details / Instructions
+      <textarea id="orderNotes" rows="4" placeholder="Tell us what you want..."></textarea>
+    </label>
+    <label>Photo (optional)
+      <input id="orderPhoto" type="file" accept="image/*">
+      <small>For privacy, the photo is not uploaded to the website. You can attach it manually in WhatsApp after the order message opens.</small>
+    </label>
+    <button class="btn primary order-btn" type="submit">📲 Send Order to WhatsApp</button>
+  </form>
+</section>
+
 <section id="contact" class="contact">
   <div><p class="eyebrow">READY TO CREATE YOURS?</p><h2>Let's turn your photo into art.</h2><p>📍 Hyderabad</p></div>
   <div class="contact-actions">
@@ -187,6 +230,26 @@ document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>nav.classList.remove
   input.addEventListener('keydown',e=>{if(e.key==='Enter')sendMsg();});
   document.querySelectorAll('.quick button').forEach(b=>b.onclick=()=>sendMsg(b.dataset.q));
 })();
+</script>
+
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name=document.getElementById('customerName').value.trim();
+  const phone=document.getElementById('customerPhone').value.trim();
+  const size=document.getElementById('orderSize').value;
+  const type=document.getElementById('orderType').value;
+  const location=document.getElementById('customerLocation').value.trim();
+  const notes=document.getElementById('orderNotes').value.trim();
+  const photo=document.getElementById('orderPhoto').files[0];
+
+  let msg=`Hi PS STRING ART!%0A%0AI want to place a custom order.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ADelivery Location: ${encodeURIComponent(location)}%0ASize: ${encodeURIComponent(size)}%0AOrder Type: ${encodeURIComponent(type)}`;
+  if(notes) msg+=`%0ADetails: ${encodeURIComponent(notes)}`;
+  if(photo) msg+=`%0A%0A📸 I have selected a photo. I will attach it in this WhatsApp chat.`;
+
+  window.open(`https://wa.me/919701258294?text=${msg}`,'_blank');
+});
 </script>
 
 </body>
